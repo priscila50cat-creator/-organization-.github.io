@@ -1,4 +1,11 @@
 # -organization-.github.io
+import qrcode
+qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_H)
+qr.add_data("https://seu-usuario.github.io/seu-repo/")
+qr.make(fit=True)
+img = qr.make_image(format="SVG")
+with open("qr_setembro_amarelo.svg","wb") as f:
+    f.write(img.getvalue())
 setembro amarelo enfermagem á favor da vida´´um gesto de cuidado pode salvar uma vida´´
 <!doctype html>
 <html lang="pt-BR">
